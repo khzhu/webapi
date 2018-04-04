@@ -13,8 +13,8 @@ mvn -X clean compile install
 ##4.deploy to the site
 ```
 cd /usr/local/tomcat/webapps
-mkdir api
-cd api
+mkdir web
+cd web
 cp ~/myspace/webapi/target/webapi-0.0.1-SNAPSHOT.war ./
 mv webapi-0.0.1-SNAPSHOT.war api.war
 ```
@@ -23,4 +23,8 @@ mv webapi-0.0.1-SNAPSHOT.war api.war
 /usr/local/tomocat/bin/catalina.sh start
 ```
 ##6.view swagger documents
-http://localhost:8081/api/swagger-ui.html
+http://localhost:8081/web/swagger-ui.html
+##7.query image id
+```
+curl http://localhost:8081/web/api/fetch-image-ids/CHX-001
+```
