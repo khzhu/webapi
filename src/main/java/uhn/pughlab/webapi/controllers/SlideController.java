@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-@Api(value="webapi", description="Operations pertaining to tissue images")
+@Api(value="REST API", description="Operations pertaining to tissue images")
 public class SlideController {
 
     private SlideService slideService;

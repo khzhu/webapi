@@ -12,10 +12,9 @@ mvn -X clean compile install
 ```
 ##4.deploy to the site
 ```
-cd /usr/local/tomcat/webapps
-mkdir web
-cd web
-cp ~/myspace/webapi/target/webapi-0.0.1-SNAPSHOT.war ./
+mkdir -p /usr/local/tomcat/webapps/web
+cd /usr/local/tomcat/webapps/web
+cp ~/myspace/webapi/target/wabapi-0.0.1-SNAPSHOT.war ./
 mv webapi-0.0.1-SNAPSHOT.war api.war
 ```
 ##5.start tomcat
@@ -26,5 +25,6 @@ mv webapi-0.0.1-SNAPSHOT.war api.war
 http://localhost:8081/web/swagger-ui.html
 ##7.query image id
 ```
-curl http://localhost:8081/web/api/fetch-image-ids/CHX-001
+curl http://localhost:8081/web/api/fetch-image-ids/CHX-008
+[67]
 ```
