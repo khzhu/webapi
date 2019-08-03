@@ -1,29 +1,29 @@
-##1.set up database
+## 1.set up database
 ```
 mysql> create database cbio_data
 ```
-##2.grant permissions to a user
+## 2.grant permissions to a user
 ```
 mysql> grant all privileges on cbio_data.* to 'cbio_user'@'localhost' identified by 'somepassword'
 ```
-##3.build from source
+## 3.build from source
 ```
 mvn -X clean compile install
 ```
-##4.deploy to the site
+## 4.deploy to the site
 ```
 mkdir -p /usr/local/tomcat/webapps/web
 cd /usr/local/tomcat/webapps/web
 cp ~/myspace/webapi/target/wabapi-0.0.1-SNAPSHOT.war ./
 mv webapi-0.0.1-SNAPSHOT.war api.war
 ```
-##5.start tomcat
+## 5.start tomcat
 ```
 /usr/local/tomocat/bin/catalina.sh start
 ```
-##6.view swagger documents
+## 6.view swagger documents
 http://localhost:8081/web/swagger-ui.html
-##7.query image id
+## 7.query image id
 ```
 curl http://localhost:8081/web/api/fetch-image-ids/CHX-008
 [67]
